@@ -1,0 +1,19 @@
+---
+- hosts: localhost
+  collections:
+    - netapp.ontap
+  gather_facts: no
+  module_defaults:
+    group/netapp.ontap.netapp_ontap:
+      hostname: "{{ netapp_hostname }}"
+      username: "{{ netapp_username }}"
+      password: "{{ netapp_password }}"
+      https: true
+      validate_certs: false
+  tasks:
+  - name: Gathering Ontap Version
+    na_ontap_info:
+      gather_subset: "ontapi_version"
+    register: ontap_info
+  - debug:
+      msg: Ontapi version "{{ ontap_info.ontap_info.ontapi_version }}"
