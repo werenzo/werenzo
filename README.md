@@ -1,5 +1,6 @@
 - Hi, I’m Lorenzo, an IT professional who lives and works in Italy
-- I’m currently learning how to automate system and storage administration
+- system and storage administration, dc operations
+- 
 - https://medium.com/@oznerolnotes
 
 <!---
